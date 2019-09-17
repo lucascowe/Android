@@ -46,8 +46,14 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder> {
         }
     }
 
+
+
     public interface RecListener {
         void onRecClick(int position);
+    }
+
+    public interface RecyclerData {
+        void saveData();
     }
 
     @NonNull
@@ -69,4 +75,5 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder> {
     public int getItemCount() {
         return recyclerList.size();
     }
+
 }

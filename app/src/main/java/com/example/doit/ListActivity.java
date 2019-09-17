@@ -1,14 +1,12 @@
 package com.example.doit;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.ActionMode;
 import android.widget.EditText;
-import android.widget.TextView;
 
 public class ListActivity extends AppCompatActivity {
 
@@ -23,6 +21,8 @@ public class ListActivity extends AppCompatActivity {
         editText = findViewById(R.id.editText);
         Intent intent = getIntent();
         position = intent.getIntExtra("position",0);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(MainActivity.toDos.get(position).getData1());
         editText.setText(MainActivity.toDos.get(position).getData2());
     }
 
