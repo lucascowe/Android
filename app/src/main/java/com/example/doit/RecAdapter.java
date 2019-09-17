@@ -25,6 +25,7 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder> {
 
         TextView header, comment, data3, data4;
         RecListener mRecListener;
+        Boolean selected = false;
 
         public ViewHolder(@NonNull View itemView, RecListener recListener) {
             super(itemView);
@@ -46,14 +47,8 @@ public class RecAdapter extends RecyclerView.Adapter<RecAdapter.ViewHolder> {
         }
     }
 
-
-
     public interface RecListener {
         void onRecClick(int position);
-    }
-
-    public interface RecyclerData {
-        void saveData();
     }
 
     @NonNull
